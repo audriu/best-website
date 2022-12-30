@@ -5,22 +5,20 @@
     <title>La Ze Paige</title>
     <meta name="description" content="The best website">
     <meta name="keywords" content="html best olrait">
+    <script src="change_favicon.js"></script>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 <body>
     <p>hi from index file</p>
+    <button>¯\_(ツ)_/¯</button>
 </body>
 
 <script type="text/javascript">
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function (position) {
-            var lat = position.coords.latitude;
-            var lng = position.coords.longitude;
-
-            console.log(lat, lng)
-        });
-    }
-    document.cookie = "username=me";
+    var btn = document.getElementsByTagName('button')[0];
+    btn.onclick = function () {
+        changeFavicon('http://www.google.com/favicon.ico');
+    };
 </script>
 
 </html>
