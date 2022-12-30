@@ -1,1 +1,14 @@
 <p>hi from index file</p>
+
+<script type="text/javascript">
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function (position) {
+            var lat = position.coords.latitude;
+            var lng = position.coords.longitude;
+
+            console.log(lat,lng)
+        });
+    }
+
+    document.cookie = "username=me";
+</script>
