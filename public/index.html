@@ -10,14 +10,20 @@
 </head>
 
 <body>
-    <p>hi from index file</p>
+    <p>Hi from index file</p>
     <button>¯\_(ツ)_/¯</button>
+    <br>
+    <div>Editable IFrame</div>
+    <iframe src="editable_styles.html"></iframe>
 </body>
 
 <script type="text/javascript">
     var btn = document.getElementsByTagName('button')[0];
+    const icons = ['http://www.google.com/favicon.ico', "favicon.ico", 'http://youtube.com/favicon.ico'];
+    let next = 1;
     btn.onclick = function () {
-        changeFavicon('http://www.google.com/favicon.ico');
+        next = (next + 1) % icons.length;
+        changeFavicon(icons[next]);
     };
 </script>
 
