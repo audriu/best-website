@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owerride Scroll</title>
+</head>
+
+<body>
+    <h1>Owerride Scroll</h1>
+    <p>Lorem ipsum dolor sit amet</p>
+</body>
+<script>
+    window.addEventListener('keydown', function (e) {
+        if (e.ctrlKey && (e.key === '+' || e.key === '=' || e.key === '-')) {
+            // '+' can be '=' on some keyboards
+            console.log('zoom in action ' + e.key);
+            e.preventDefault();
+        }
+    });
+    window.addEventListener('resize', function (e) {
+            console.log('resize ' + e);
+            e.preventDefault();
+    });
+</script>
+
+</html>
